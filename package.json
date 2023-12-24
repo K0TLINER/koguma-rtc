@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "node server.js",
+    "build": "node server.js"
+  },
   "name": "webrtc-codelab",
   "version": "0.0.1",
   "description": "WebRTC codelab",
