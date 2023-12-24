@@ -123,12 +123,8 @@ io.on("connection", (socket) => {
     socket.broadcast.to(users[roomID]).emit("user_exit", { id: socket.id });
   });
 
-  socket.on("mic change", (roomName) => {
-    socket.to(roomName).emit("mic change");
-  });
-
-  socket.on("cam change", (roomName) => {
-    socket.to(roomName).emit("cam change");
+  socket.on("cam change", (data) => {
+    socket.to(data.roomId).emit("cam change");
   });
 
   socket.on("exit room", (data) => {
