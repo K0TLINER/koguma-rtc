@@ -56,7 +56,7 @@ let users = {};
 let socketRoom = {};
 
 // 방의 최대 인원수
-const MAXIMUM = 2;
+const MAXIMUM = 3;
 
 io.on("connection", (socket) => {
   console.log(socket.id, "connection");
