@@ -56,7 +56,7 @@ let users = {};
 let socketRoom = {};
 
 // 방의 최대 인원수
-const MAXIMUM = 30;
+const MAXIMUM = 2;
 
 io.on("connection", (socket) => {
   console.log(socket.id, "connection");
@@ -123,9 +123,9 @@ io.on("connection", (socket) => {
     socket.broadcast.to(users[roomID]).emit("user_exit", { id: socket.id });
   });
 
-  socket.on("cam change", (data) => {
-    socket.to(data.roomId).emit("cam change");
-  });
+  // socket.on("cam change", (data) => {
+  //   socket.to(data.roomId).emit("cam change");
+  // });
 
   socket.on("exit room", (data) => {
     console.log("exit room");
