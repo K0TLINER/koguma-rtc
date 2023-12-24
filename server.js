@@ -37,7 +37,7 @@ const EVENTS = {
 };
 const io = new Server(server, {
   cors: {
-    origin: "https://api.5quys.com",
+    origin: "https://koguma.5quys.com",
     // origin: "http://localhost:3000",
     methods: ["GET", "POST"],
     allowedHeaders: [
